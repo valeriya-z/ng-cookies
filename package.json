@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Simple cookie service for AngularJS",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/roryf/ng-cookies.git"
+  },
+  "homepage": "https://github.com/roryf/ng-cookies",
   "scripts": {
     "test": "karma start karma.conf.js",
     "compile": "browserify index.js -o dist/ng-cookies.js",
