@@ -10,10 +10,8 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "test",
-    "tests",
-    "src",
+    "test*",
     "bin",
-    "karma-*"
+    "karma*"
   ]
 }
