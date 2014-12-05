@@ -1,0 +1,19 @@
+{
+  "name": "ng-cookies",
+  "version": "1.0.0",
+  "description": "Simple cookie service for AngularJS",
+  "authors": [
+    "FanDuel Inc.",
+    "Rory Fitzpatrick"
+  ],
+  "main": "dist/ng-cookies.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests",
+    "src",
+    "bin",
+    "karma-*"
+  ]
+}
