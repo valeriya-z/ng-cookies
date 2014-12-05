@@ -10,19 +10,19 @@ angular.module('ngCookie', [])
         cookies;
 
       return {
-        get: function(key) {
+        get: function(name) {
           if ($document.cookie !== lastCookieString) {
             lastCookieString = $document.cookie;
             cookies = cookie.parse(lastCookieString, defaultOptions);
           }
 
-          return cookies[key];
+          return cookies[name];
         },
 
-        set: function(key, value, options) {
+        set: function(name, value, options) {
           options = angular.extend(angular.extend({}, defaultOptions), options || {});
 
-          $document.cookie = cookie.serialize(key, value, options);
+          $document.cookie = cookie.serialize(name, value, options);
         }
       };
     };
