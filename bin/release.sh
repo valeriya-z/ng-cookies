@@ -2,7 +2,6 @@
 
 # get current version
 VERSION=$(node --eval "console.log(require('./package.json').version);")
-CURRENT_BRANCH=$(git rev-parse HEAD)
 
 # Build
 git checkout -b build
@@ -20,5 +19,5 @@ git tag -f v$VERSION
 git push --tags
 
 # Cleanup
-git checkout $CURRENT_BRANCH
+git checkout master
 git branch -D build
