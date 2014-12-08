@@ -6,7 +6,7 @@ describe('ngCookie', function() {
   beforeEach(angular.mock.module(require('./index').name));
   beforeEach(angular.mock.module(function($provide) {
     $document = {};
-    $provide.value('$document', $document);
+    $provide.value('$document', [$document]);
   }));
 
   it('gets existing cookies', inject(function(cookies) {

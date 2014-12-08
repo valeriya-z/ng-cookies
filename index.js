@@ -21,7 +21,8 @@ angular.module('ngCookie', [])
      */
     this.$get = /* @ngInject */ function($document) {
       var lastCookieString,
-        cookies;
+        cookies,
+        document = $document[0];
 
       /**
        * @ngdoc service
@@ -43,8 +44,8 @@ angular.module('ngCookie', [])
          * @returns {string} Value of cookie or `undefined`.
          */
         get: function(name) {
-          if ($document.cookie !== lastCookieString) {
-            lastCookieString = $document.cookie;
+          if (document.cookie !== lastCookieString) {
+            lastCookieString = document.cookie;
             cookies = cookie.parse(lastCookieString, defaultOptions);
           }
 
@@ -65,7 +66,7 @@ angular.module('ngCookie', [])
         set: function(name, value, options) {
           options = angular.extend(angular.extend({}, defaultOptions), options || {});
 
-          $document.cookie = cookie.serialize(name, value, options);
+          document.cookie = cookie.serialize(name, value, options);
         }
       };
     };
