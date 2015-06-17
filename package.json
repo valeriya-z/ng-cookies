@@ -70,5 +70,9 @@
   },
   "browserify-shim": {
     "angular": "global:angular"
+  },
+  "jspm": {
+    "format": "global",
+    "main": "dist/ng-cookies.min.js"
   }
 }

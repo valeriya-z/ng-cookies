@@ -9,8 +9,10 @@ git checkout -b build
 npm run clean
 npm run build
 
+git rm .gitignore
+
 # Create git tag, which is also the Bower/Github release
-git add dist -f
+git add dist
 
 git commit -m "release $VERSION"
 
