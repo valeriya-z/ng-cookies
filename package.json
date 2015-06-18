@@ -1,6 +1,6 @@
 {
   "name": "ng-cookies",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Simple cookie service for AngularJS",
   "main": "index.js",
   "repository": {
@@ -70,5 +70,9 @@
   },
   "browserify-shim": {
     "angular": "global:angular"
+  },
+  "jspm": {
+    "format": "global",
+    "main": "dist/ng-cookies.min.js"
   }
 }
